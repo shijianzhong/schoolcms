@@ -4,6 +4,10 @@
         <swiper loop auto :list="carouselList" :index="carouselIndex" @on-index-change="carouselIndexChange"></swiper>
         <p>current index: {{carouselIndex}}</p>
         <main-menu></main-menu>
+        <div class="signup">
+          <x-button mini>UCB预科报名</x-button>
+        </div>
+        <admit-ino></admit-ino>
     </div>
 </template>
 <script>
@@ -32,14 +36,17 @@ const urlList = baseList.map((item, index) => ({
   fallbackImg: item.fallbackImg,
   title: `(可点击)${item.title}`
 }));
-import { Swiper } from "vux";
+import { Swiper,XButton} from "vux";
 import headerSearch from '@/components/headerSearch'
 import mainMenu from '@/components/mainMenu'
+import admitIno from '@/components/admitIno'
 export default {
   components: {
     Swiper,
     headerSearch,
-    mainMenu
+    mainMenu,
+    XButton,
+    admitIno
   },
   data() {
     return {
@@ -61,6 +68,12 @@ export default {
             position: absolute;
             width: 100%;
             z-index: 2
+        }
+        .signup{
+          height: 10rem;
+          background-color: red;
+          text-align: center;
+          line-height: 10rem;
         }
     }
 </style>
