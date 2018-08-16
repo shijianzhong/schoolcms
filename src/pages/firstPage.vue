@@ -8,6 +8,7 @@
           <x-button mini>UCB预科报名</x-button>
         </div>
         <admit-ino></admit-ino>
+        <show-cases></show-cases>
     </div>
 </template>
 <script>
@@ -40,13 +41,15 @@ import { Swiper,XButton} from "vux";
 import headerSearch from '@/components/headerSearch'
 import mainMenu from '@/components/mainMenu'
 import admitIno from '@/components/admitIno'
+import showCases from '@/components/showCases'
 export default {
   components: {
     Swiper,
     headerSearch,
     mainMenu,
     XButton,
-    admitIno
+    admitIno,
+    showCases
   },
   data() {
     return {
