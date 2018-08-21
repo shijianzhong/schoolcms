@@ -42,6 +42,7 @@ import headerSearch from '@/components/headerSearch'
 import mainMenu from '@/components/mainMenu'
 import admitIno from '@/components/admitIno'
 import showCases from '@/components/showCases'
+import {getlistSort} from '../api'
 export default {
   components: {
     Swiper,
@@ -56,6 +57,13 @@ export default {
       carouselList: urlList,
       carouselIndex:0,
     };
+  },
+  created(){
+    debugger
+    getlistSort().then(res=>{
+      var a =res;
+      console.log(a);
+    })
   },
   methods: {
     carouselIndexChange(index) {
