@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="homeCon">
     <group>
       <first-page></first-page>
     </group>
@@ -47,6 +47,9 @@ export default {
 </script>
 
 <style>
+.homeCon{
+  margin-top: 45px;
+}
 .vux-demo {
   text-align: center;
 }
