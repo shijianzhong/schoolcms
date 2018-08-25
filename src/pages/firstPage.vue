@@ -9,6 +9,7 @@
         </div>
         <admit-ino></admit-ino>
         <show-cases></show-cases>
+        <interna-trends></interna-trends>
     </div>
 </template>
 <script>
@@ -42,6 +43,7 @@ import headerSearch from '@/components/headerSearch'
 import mainMenu from '@/components/mainMenu'
 import admitIno from '@/components/admitIno'
 import showCases from '@/components/showCases'
+import internaTrends from '@/components/internaTrends'
 import {getlistSort} from '../api'
 export default {
   components: {
@@ -50,7 +52,8 @@ export default {
     mainMenu,
     XButton,
     admitIno,
-    showCases
+    showCases,
+    internaTrends
   },
   data() {
     return {
@@ -59,7 +62,7 @@ export default {
     };
   },
   created(){
-    debugger
+    // debugger
     getlistSort().then(res=>{
       var a =res;
       console.log(a);
