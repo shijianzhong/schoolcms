@@ -19,35 +19,35 @@ export default {
     return {
       menus: [
         {
-          url: "",
+          url: "../../static/4.png",
           label: "为明国际"
         },
         {
-          url: "",
+          url: "../../static/1.png",
           label: "伯克利衔接班"
         },
         {
-          url: "",
+          url: "../../static/2.png",
           label: "伯克利预科"
         },
         {
-          url: "",
+          url: "../../static/6.png",
           label: "中美联合培养计划"
         },
         {
-          url: "",
+          url: "../../static/5.png",
           label: "欧洲项目"
         },
         {
-          url: "",
+          url: "../../static/3.png",
           label: "精品研学"
         },
         {
-          url: "",
+          url: "../../static/7.png",
           label: "专场活动"
         },
         {
-          url: "",
+          url: "../../static/8.png",
           label: "资料下载"
         }
 

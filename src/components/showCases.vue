@@ -54,7 +54,7 @@
   .title {
     height: 50px;
     line-height: 50px;
-    background-color: gray;
+    background-color:  rgb(79,93,110);;
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;

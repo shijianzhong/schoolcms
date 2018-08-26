@@ -10,6 +10,7 @@
         <admit-ino></admit-ino>
         <show-cases></show-cases>
         <interna-trends></interna-trends>
+        <cooperation-school></cooperation-school>
     </div>
 </template>
 <script>
@@ -44,6 +45,7 @@ import mainMenu from '@/components/mainMenu'
 import admitIno from '@/components/admitIno'
 import showCases from '@/components/showCases'
 import internaTrends from '@/components/internaTrends'
+import cooperationSchool from '@/components/cooperationSchool'
 import {getlistSort} from '../api'
 export default {
   components: {
@@ -53,7 +55,8 @@ export default {
     XButton,
     admitIno,
     showCases,
-    internaTrends
+    internaTrends,
+    cooperationSchool
   },
   data() {
     return {

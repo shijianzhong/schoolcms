@@ -1,7 +1,7 @@
 <template>
     <div class="cooperation">
         <div class="title">
-            <div class="titlename"><span style="border-left:5px solid red;margin-right:5px"></span>录取捷报</div>
+            <div class="titlename"><span style="border-left:5px solid red;margin-right:5px"></span>合作院校</div>
             <!-- <div class="morebtn">更多></div> -->
         </div>
         <div class="maininfo">
@@ -18,7 +18,7 @@
         .title{
             height: 50px;
             line-height: 50px;
-            background-color: gray;
+            background-color: rgb(79,93,110);
             display: flex;
             display: -webkit-flex;
             justify-content: space-between;
