@@ -7,12 +7,28 @@
         <div class="maininfo">
             <div class="item">
                 <div class="item-left">
-                    <div>【贴士】关于签证那些事儿</div>
-                    <div>2018-08-25</div>
+                    <h5 class="subject">【贴士】关于签证那些事儿</h5>
+                    <div class="info">
+                        <span>2018-08-25</span>
+                        <span>阅读68人</span>
+                    </div>
                 </div>
-                <div class="item-right"></div>
+                <div class="item-right">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535255625454&di=86375646309d75d1583ff695f0c1d34d&imgtype=0&src=http%3A%2F%2Fpic40.photophoto.cn%2F20160730%2F0020033008993110_b.jpg">
+                </div>
             </div>
-    
+              <div class="item">
+                <div class="item-left">
+                    <h5 class="subject">【贴士】关于签证那些事儿</h5>
+                    <div class="info">
+                        <span>2018-08-25</span>
+                        <span>阅读68人</span>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535255625454&di=86375646309d75d1583ff695f0c1d34d&imgtype=0&src=http%3A%2F%2Fpic40.photophoto.cn%2F20160730%2F0020033008993110_b.jpg">
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -43,11 +59,31 @@
             .item{
                 display: flex;
                 display: -webkit-flex;
+                height: 10rem;;
+                padding: 10px 0px;
+                border: 1px solid rgba(0,0,0,0.1);
                 .item-left{
                     width: 65%;
+                    .subject{
+                        height: 5rem;
+                        line-height: 5rem;
+                        text-align: center;
+                    }
+                    .info{
+                        height: 5rem;
+                        display: flex;
+                        display: -webkit-flex;
+                        justify-content: space-around;   
+                        color: rgba(0,0,0,0.5);    
+                        font-size: 2rem;
+                    }
+                    
                 }
                 .item-right{
                     width: 35%;
+                    img{
+                        height: 100%;
+                    }
                 }
             }
             
