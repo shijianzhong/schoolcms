@@ -2,7 +2,7 @@
 
   <div id="app" style="height:100%;">
     <view-box ref="viewBox">
-      <x-header slot="header" style="width:100%; position:absolute;left:0;top:0;z-index:100;">cms</x-header>
+      <x-header slot="header" style="width:100%; position:absolute;left:0;top:0;z-index:100;">为明国际</x-header>
       <router-view></router-view>
     </view-box>
   </div>

@@ -5,6 +5,8 @@ import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
 import home from './pages/home'
+import Mint from 'mint-ui';
+Vue.use(Mint);
 
 
 Vue.use(VueRouter)
