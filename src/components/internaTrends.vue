@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="item-right">
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535255625454&di=86375646309d75d1583ff695f0c1d34d&imgtype=0&src=http%3A%2F%2Fpic40.photophoto.cn%2F20160730%2F0020033008993110_b.jpg">
+                    <img src="http://119.29.193.74:3001/upFile/1535788333041.png">
                 </div>
             </div>
               <div class="item">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="item-right">
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535255625454&di=86375646309d75d1583ff695f0c1d34d&imgtype=0&src=http%3A%2F%2Fpic40.photophoto.cn%2F20160730%2F0020033008993110_b.jpg">
+                    <img src="http://119.29.193.74:3001/upFile/1535788333041.png">
                 </div>
             </div>
         </div>
@@ -83,6 +83,7 @@
                     width: 35%;
                     img{
                         max-width: 75%;
+                        max-height: 90%;
                     }
                 }
             }
