@@ -5,11 +5,7 @@
             <!-- <div class="morebtn">更多></div> -->
         </div>
         <div class="maininfo">
-            <div class="item">张同学被清华大学录取</div>
-            <div class="item">张同学被清华大学录取</div>
-            <div class="item">张同学被清华大学录取</div>
-            <div class="item">张同学被清华大学录取</div>
-            <div class="item">张同学被清华大学录取</div>
+            <img src="../assets/compschool.png">
         </div>
     </div>
 </template>
@@ -36,14 +32,14 @@
             }
         }
         .maininfo{
-            background-color: green;
             display: flex;
             display: -webkit-flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            .item{
-                width: 50%;
-                text-align: center;
+            padding: 10px;
+            img{
+                width: 100%;
+                height: 100%;
             }
             
         }

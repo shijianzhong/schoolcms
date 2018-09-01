@@ -76,6 +76,7 @@
       border: 1px solid rgba(0,0,0,0.1);
       padding-bottom:20px;
       padding-top: 20px;
+      padding-right: 10px;
       display: flex;
       display: -webkit-flex;
       flex-wrap: wrap;

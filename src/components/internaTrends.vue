@@ -82,7 +82,7 @@
                 .item-right{
                     width: 35%;
                     img{
-                        height: 100%;
+                        max-width: 75%;
                     }
                 }
             }

@@ -15,9 +15,9 @@ export default {
 </script>
 <style lang="less">
     .headerSearch{
-        height: 5rem;
+        height: 50px;
         background-color: rgba(190,190,190,0.6);
-        line-height: 5rem;
+        line-height: 50px;
         text-align:center;
     }
 </style>

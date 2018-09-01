@@ -36,7 +36,8 @@
             }
         }
         .maininfo{
-            background-color: green;
+            margin:10px 0px;
+            background-color:rgba(0,0,0,0.1);
             display: flex;
             display: -webkit-flex;
             flex-wrap: wrap;
