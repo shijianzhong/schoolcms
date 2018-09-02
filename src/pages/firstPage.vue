@@ -2,8 +2,7 @@
     <div class="firstPage">
         <header-search class="headersearch"></header-search>
         <swiper loop auto :list="carouselList" :index="carouselIndex" @on-index-change="carouselIndexChange"></swiper>
-        <!-- <p>current index: {{carouselIndex}}</p> -->
-        <main-menu></main-menu>
+        <main-menu v-model="mainMenuIndex"></main-menu>
         <div class="signup">
           <img src="../assets/signba.png">
           <x-button class="signupbtn" mini>UCB预科报名</x-button>
@@ -63,14 +62,20 @@ export default {
     return {
       carouselList: urlList,
       carouselIndex:0,
+      mainMenuIndex:-1,
     };
+  },
+  watch:{
+    mainMenuIndex(val){
+      debugger;
+    }
   },
   created(){
     // debugger
-    getlistSort().then(res=>{
-      var a =res;
-      console.log(a);
-    })
+    // getlistSort().then(res=>{
+    //   var a =res;
+    //   console.log(a);
+    // })
   },
   methods: {
     carouselIndexChange(index) {

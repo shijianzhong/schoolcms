@@ -2,7 +2,7 @@
   <div class="mainmenu">
     <grid :cols="4" :show-lr-borders="false">
       <grid-item v-for="(item,index) in menus" :key="index" :label="item.label">
-        <img slot="icon" :src="item.url">
+        <img slot="icon" :src="item.url" @click="mainMenuClick(item,index)">
       </grid-item>
     </grid>
   </div>
@@ -53,6 +53,20 @@ export default {
 
       ]
     };
+  },
+  methods:{
+    mainMenuClick(item,index){
+      switch(index){
+        case 0:
+        this.$router.push({path:'/weimingschool'})
+        break;
+        case 1:
+        debugger
+        this.$router.push({path:'./berkeleyschool'})
+        break;
+      }
+      
+    }
   }
 };
 </script>
