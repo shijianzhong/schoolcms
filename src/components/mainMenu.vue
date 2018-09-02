@@ -1,8 +1,9 @@
 <template>
   <div class="mainmenu">
     <grid :cols="4" :show-lr-borders="false">
-      <grid-item v-for="(item,index) in menus" :key="index" :label="item.label">
+      <grid-item v-for="(item,index) in menus" :key="index">
         <img slot="icon" :src="item.url" @click="mainMenuClick(item,index)">
+        <span class="spanlabel" slot="label">{{item.label}}</span>
       </grid-item>
     </grid>
   </div>
@@ -71,7 +72,13 @@ export default {
 </script>
 <style lang="less">
 .mainmenu {
-
+  .weui-grids{
+    .weui-grid{
+      .weui-grid__label{
+        font-size: 10px;
+      }
+    }
+  }
 }
 </style>
 

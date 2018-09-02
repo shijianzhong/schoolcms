@@ -9,6 +9,8 @@ import home from './pages/home'
 import weimingSchool from './pages/weimingSchool'
 import berkeleySchool from './pages/berkeleySchool'
 import berkeleyPrim from './pages/berkeleyPrim'
+import berkeleyAbbre from './pages/berkeleyAbbre'
+import berkeleyHigh from './pages/berkeleyHigh'
 // Vue.use(Mint);
 
 
@@ -29,6 +31,14 @@ const routes = [{
     {
         path: '/berkeleyprim',
         component: berkeleyPrim
+    },
+    {
+        path: '/berkeleyabbre',
+        component: berkeleyAbbre
+    },
+    {
+        path: '/berkeleyhigh',
+        component: berkeleyHigh
     }
 ]
 

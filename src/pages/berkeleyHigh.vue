@@ -1,25 +1,25 @@
 <template>
-    <div class="berkeleyprim">
-        <header-search title="伯克利小学衔接班" class="headersearch"></header-search>
+    <div class="berkeleyhigh">
+        <header-search title="伯克利高中衔接班" class="headersearch"></header-search>
         <div class="mainimg">
-            <img src="../assets/berkeley/prim/main.png">
+            <img src="../assets/berkeley/high/main.png">
             <div class="signbtn" v-if="!singup" @click="linkSignPage">报名</div>
         </div>
-        <berkeley-priminfo v-if="!singup"></berkeley-priminfo>
-        <sign-upinfo v-else title="伯克利小学衔接班报名方式"></sign-upinfo>
+        <berkeley-highinfo v-if="!singup"></berkeley-highinfo>
+        <sign-upinfo v-else title="伯克利高中衔接班报名方式"></sign-upinfo>
     </div>
 </template>
 <script>
 import headerSearch from "@/components/headerSearch";
 import signUpinfo from "@/components/signUpinfo";
-import berkeleyPriminfo from "@/components/berkeleyPriminfo"
+import berkeleyHighinfo from "@/components/berkeleyHighinfo"
 
 import { getlistSort } from "../api";
 export default {
   components: {
     headerSearch,
     signUpinfo,
-    berkeleyPriminfo
+    berkeleyHighinfo
   },
   data() {
     return {
@@ -35,7 +35,7 @@ export default {
 };
 </script>
 <style lang="less">
-.berkeleyprim {
+.berkeleyhigh {
   margin-top: 45px;
   font-size: 17px;
   position: relative;

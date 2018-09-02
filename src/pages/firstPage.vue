@@ -1,6 +1,6 @@
 <template>
     <div class="firstPage">
-        <header-search class="headersearch"></header-search>
+        <header-search title="为明国际教育" class="headersearch"></header-search>
         <swiper loop auto :list="carouselList" :index="carouselIndex" @on-index-change="carouselIndexChange"></swiper>
         <main-menu v-model="mainMenuIndex"></main-menu>
         <div class="signup">
@@ -87,10 +87,12 @@ export default {
 </script>
 <style lang="less">
     .firstPage{
+        position: relative;
         .headersearch{
             position: absolute;
             width: 100%;
-            z-index: 2
+            z-index: 2;
+            top:0px;
         }
         .signup{
           position: relative;

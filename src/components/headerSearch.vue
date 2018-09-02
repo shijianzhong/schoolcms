@@ -1,6 +1,6 @@
 <template>
     <div class="headerSearch">
-        <span><h3>为明国际教育集团</h3></span>
+        <span><h3>{{title}}</h3></span>
 
     </div>
 </template>
@@ -10,7 +10,8 @@ import { Search } from 'vux'
 export default {
   components: {
     Search
-  }
+  },
+  props:['title']
 }
 </script>
 <style lang="less">

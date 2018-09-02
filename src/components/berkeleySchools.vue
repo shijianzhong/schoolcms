@@ -64,6 +64,10 @@ export default {
     linkDetail(index){
         if(index==1){
             this.$router.push({path:"./berkeleyprim"})
+        }else if(index==2){
+            this.$router.push({path:'./berkeleyabbre'})
+        }else if(index==3){
+            this.$router.push({path:'./berkeleyhigh'})
         }
     }
   }
