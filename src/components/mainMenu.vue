@@ -61,8 +61,7 @@ export default {
         this.$router.push({path:'/weimingschool'})
         break;
         case 1:
-        debugger
-        this.$router.push({path:'./berkeleyschool'})
+        this.$router.push({path:'/berkeleyschool'})
         break;
       }
       

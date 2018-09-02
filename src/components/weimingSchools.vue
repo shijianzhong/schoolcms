@@ -1,5 +1,5 @@
 <template>
-    <div class="showcases">
+    <div class="weimingcom">
         <div class="title">
             <div class="titlename">
                 <span style="border-left:5px solid red;margin-right:5px"></span>为明校区</div>
@@ -85,7 +85,7 @@
     </div>
 </template>
 <style lang="less">
-.showcases {
+.weimingcom {
   .title {
     height: 50px;
     line-height: 50px;

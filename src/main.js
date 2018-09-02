@@ -5,10 +5,11 @@ import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
 import home from './pages/home'
-import Mint from 'mint-ui';
+// import Mint from 'mint-ui';
 import weimingSchool from './pages/weimingSchool'
 import berkeleySchool from './pages/berkeleySchool'
-Vue.use(Mint);
+import berkeleyPrim from './pages/berkeleyPrim'
+// Vue.use(Mint);
 
 
 Vue.use(VueRouter)
@@ -24,6 +25,10 @@ const routes = [{
     {
         path: '/berkeleyschool',
         component: berkeleySchool
+    },
+    {
+        path: '/berkeleyprim',
+        component: berkeleyPrim
     }
 ]
 

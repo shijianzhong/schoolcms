@@ -1,5 +1,5 @@
 <template>
-    <div class="showcases">
+    <div class="brikeleyschools">
         <div class="title">
             <div class="titlename">
                 <span style="border-left:5px solid red;margin-right:5px"></span>伯克利衔接班介绍</div>
@@ -23,23 +23,26 @@
                 </div>
 
             </div>
-            <div class="loadmore" @click="loadMore">
+            <div v-if="!isloadmore" class="loadmore" @click="loadMore">
                 <div style="text-align:center">加载更多</div>
                 <div class="icon">
                     <img src="../assets/lodemore.png" alt="">
                 </div>
             </div>
+            <div v-else class="loadmore" @click="loadMore">
+                <div style="text-align:center">收起</div>
+            </div>
 
             <div class="mainimg">
-                <div class="item">
+                <div class="item" @click="linkDetail(1)">
                     <img src="../assets/berkeley/primary.png" alt="伯克利小学衔接班">
                     <span class="tex">伯克利小学衔接班</span>
                 </div>
-                <div class="item">
+                <div class="item" @click="linkDetail(2)">
                     <img src="../assets/berkeley/abbre.png" alt="伯克利初中衔接班">
                     <span class="tex">伯克利初中衔接班</span>
                 </div>
-                <div class="item">
+                <div class="item" @click="linkDetail(3)">
                     <img src="../assets/berkeley/high.png" alt="伯克利高中衔接班">
                     <span class="tex">伯克利高中衔接班</span>
                 </div>
@@ -57,13 +60,18 @@ export default {
   methods: {
     loadMore() {
       this.isloadmore = !this.isloadmore;
+    },
+    linkDetail(index){
+        if(index==1){
+            this.$router.push({path:"./berkeleyprim"})
+        }
     }
   }
 };
 </script>
 
 <style lang="less">
-.showcases {
+.brikeleyschools {
   .title {
     height: 50px;
     line-height: 50px;
@@ -101,7 +109,7 @@ export default {
           overflow: hidden;
           text-overflow: ellipsis;
           font-size: 11px;
-          color: #6a6a6a;
+          color:rgb(106,72,0);
         }
       }
     }
