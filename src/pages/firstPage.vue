@@ -46,7 +46,7 @@ import admitIno from "@/components/admitIno";
 import showCases from "@/components/showCases";
 import internaTrends from "@/components/internaTrends";
 import cooperationSchool from "@/components/cooperationSchool";
-import { getlistSort, getCarouselList } from "../api";
+import { getlistSort, getCarouselList ,getEmitInfoList} from "../api";
 export default {
   components: {
     Swiper,

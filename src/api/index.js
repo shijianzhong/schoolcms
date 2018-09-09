@@ -9,3 +9,7 @@ import http from './request';
 export const getlistSort = () => http.post('api/listSort');
 
 export const getCarouselList = () => http.post('api/getCarouselList')
+
+export const getEmitInfoList = () => http.post('api/getEmitInfoList')
+
+export const getCasesList = () => http.post('api/getCasesList')
