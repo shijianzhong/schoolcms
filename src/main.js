@@ -11,6 +11,9 @@ import berkeleySchool from './pages/berkeleySchool'
 import berkeleyPrim from './pages/berkeleyPrim'
 import berkeleyAbbre from './pages/berkeleyAbbre'
 import berkeleyHigh from './pages/berkeleyHigh'
+import berkeleyPre from './pages/berkeleyPre'
+import cooperateHigh from './pages/cooperateHigh'
+import publicProject from './pages/publicpageForProject'
 // Vue.use(Mint);
 
 
@@ -39,7 +42,20 @@ const routes = [{
     {
         path: '/berkeleyhigh',
         component: berkeleyHigh
+    },
+    {
+        path: '/berkeleypre',
+        component: berkeleyPre
+    },
+    {
+        path: '/cooperatehigh',
+        component: cooperateHigh
+    },
+    {
+        path: '/publicproject',
+        component: publicProject
     }
+
 ]
 
 const router = new VueRouter({

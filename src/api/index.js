@@ -6,4 +6,6 @@ import http from './request';
 
 // export const logout = () => http.get('/user/logout');
 
-export const getlistSort =()=>http.post('api/listSort');
+export const getlistSort = () => http.post('api/listSort');
+
+export const getCarouselList = () => http.post('api/getCarouselList')

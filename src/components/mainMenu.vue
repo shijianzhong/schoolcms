@@ -37,7 +37,7 @@ export default {
         },
         {
           url: "../../static/5.png",
-          label: "欧洲项目"
+          label: "澳洲项目"
         },
         {
           url: "../../static/3.png",
@@ -63,6 +63,15 @@ export default {
         break;
         case 1:
         this.$router.push({path:'/berkeleyschool'})
+        break;
+        case 2:
+        this.$router.push({path:'/berkeleypre'})
+        break;
+        case 3:
+        this.$router.push({path:'/cooperatehigh'})
+        break;
+        case 4:
+        this.$router.push({path:'/publicProject'})
         break;
       }
       
