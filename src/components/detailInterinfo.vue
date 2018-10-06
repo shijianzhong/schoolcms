@@ -42,6 +42,7 @@ export default {
             text-align: center
         }
         .detailCon_author{
+            font-size: 1em;
             span{
                 margin-left: 10px;
             }
@@ -50,6 +51,7 @@ export default {
             img{
                 width: 100%;
             }
+            font-size: 2em;
         }
     }
 </style>

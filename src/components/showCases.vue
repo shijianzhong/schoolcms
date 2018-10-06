@@ -122,11 +122,12 @@ export default {
       .item-right {
         width: 60%;
         p {
-          font-size: 2rem;
+          font-size: 0.8em;
           color: rgba(0, 0, 0, 0.5);
         }
         h5 {
           margin-bottom: 5px;
+          font-size: 1em;
         }
       }
     }

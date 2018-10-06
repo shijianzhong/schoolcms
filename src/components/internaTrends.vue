@@ -96,23 +96,24 @@ export default {
     .item {
       display: flex;
       display: -webkit-flex;
-      height: 10rem;
+      height: 6em;
       padding: 10px 0px;
       border: 1px solid rgba(0, 0, 0, 0.1);
       .item-left {
         width: 65%;
         .subject {
-          height: 5rem;
-          line-height: 5rem;
+          height: 3em;
+          line-height: 3em;
           text-align: center;
+          font-size: 1em;
         }
         .info {
-          height: 5rem;
+          height: 3em;
           display: flex;
           display: -webkit-flex;
           justify-content: space-around;
           color: rgba(0, 0, 0, 0.5);
-          font-size: 2rem;
+          font-size: 0.8em;
         }
       }
       .item-right {

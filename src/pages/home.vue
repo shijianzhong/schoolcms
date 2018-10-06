@@ -2,9 +2,9 @@
 <div class="homeCon">
     <group>
       <first-page v-if="selected==0"></first-page>
-      <!-- <weiming-school v-else-if="selected==1"></weiming-school> -->
+      <weiming-school v-else-if="selected==2"></weiming-school>
     </group>
-    <tabbar class="tabbar" v-model="selected">
+    <tabbar class="tabbar" v-model="selected" @on-index-change="indexchange">
       <tabbar-item>
         <img slot="icon" src="../../static/first.png">
         <span slot="label">首页</span>
@@ -32,6 +32,7 @@
 <script>
 import { Tabbar, TabbarItem, Group, Cell } from 'vux'
 import firstPage from './firstPage'
+import weimingSchool from './weimingSchool.vue'
 export default {
   components: {
     Tabbar,
@@ -39,11 +40,23 @@ export default {
     Group,
     Cell,
     firstPage,
+    weimingSchool
   },
-
+  watch:{
+    selected(newval,oldval){
+      debugger;
+      console.log(newval);
+    }
+  },
   data () {
     return {
         selected:0,
+    }
+  },
+  methods:{
+    indexchange(val){
+      debugger;
+      console.log(val);
     }
   }
 }
