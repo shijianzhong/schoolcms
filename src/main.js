@@ -14,6 +14,7 @@ import berkeleyHigh from './pages/berkeleyHigh'
 import berkeleyPre from './pages/berkeleyPre'
 import cooperateHigh from './pages/cooperateHigh'
 import publicProject from './pages/publicpageForProject'
+import detailinter from './components/detailInterinfo.vue'
 // Vue.use(Mint);
 
 
@@ -54,6 +55,10 @@ const routes = [{
     {
         path: '/publicproject',
         component: publicProject
+    },
+    {
+        path: '/detailinter',
+        component: detailinter
     }
 
 ]

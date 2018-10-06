@@ -2,93 +2,128 @@
     <div class="internat">
         <div class="title">
             <div class="titlename"><span style="border-left:5px solid red;margin-right:5px"></span>为明国际动态</div>
-            <div class="morebtn">更多></div>
+            <div v-if="!isshowmore" @click="showMore" class="morebtn">更多></div>
+            <div v-else @click="showMore" class="morebtn">收起</div>
         </div>
-        <div class="maininfo">
-            <div class="item">
+        <div v-if="!isshowmore" class="maininfo">
+            <div class="item" v-if="index<2" v-for="(item,index) in items" :key="index">
                 <div class="item-left">
-                    <h5 class="subject">【贴士】关于签证那些事儿</h5>
+                    <h5 @click="goDetail(item)" class="subject">{{item.title}}</h5>
                     <div class="info">
-                        <span>2018-08-25</span>
-                        <span>阅读68人</span>
+                        <span>{{item.pbtime}}</span>
+                        <span>阅读{{item.readnums}}人</span>
                     </div>
                 </div>
                 <div class="item-right">
-                    <img src="http://119.29.193.74:3001/upFile/1535788333041.png">
+                    <img :src="item.headimg">
+                </div>
                 </div>
             </div>
-              <div class="item">
-                <div class="item-left">
-                    <h5 class="subject">【贴士】关于签证那些事儿</h5>
-                    <div class="info">
-                        <span>2018-08-25</span>
-                        <span>阅读68人</span>
+            <div v-else class="maininfo">
+                <div class="item" v-for="(item,index) in items" :key="index">
+                    <div class="item-left">
+                        <h5 @click="goDetail(item)" class="subject">{{item.title}}</h5>
+                        <div class="info">
+                            <span>{{item.pbtime}}</span>
+                            <span>阅读{{item.readnums}}人</span>
+                        </div>
+                    </div>
+                    <div class="item-right">
+                        <img :src="item.headimg">
+                </div>
                     </div>
                 </div>
-                <div class="item-right">
-                    <img src="http://119.29.193.74:3001/upFile/1535788333041.png">
-                </div>
             </div>
-        </div>
-    </div>
 </template>
-<style lang="less">
-    .internat{
-        .title{
-            height: 50px;
-            line-height: 50px;
-            background-color:  rgb(79,93,110);;
-            display: flex;
-            display: -webkit-flex;
-            justify-content: space-between;
-            .titlename{
-                float: left;
-                margin-left: 25px;
-                h1{
-                    color: red;
-                }
-            }
-        
-            .morebtn{
-                float: right;
-                margin-right: 15px;
-            }
+<script>
+import { SelectInterDynamics ,UpdateInterDynamicsReadtimes} from "../api";
+export default {
+  data() {
+    return {
+      items: [],
+      isshowmore: false
+    };
+  },
+  created() {
+    this.getInfo();
+  },
+  methods: {
+    getInfo() {
+      SelectInterDynamics().then(res => {
+        if (res.success) {
+          this.items = res.data;
         }
-        .maininfo{
-   
-            .item{
-                display: flex;
-                display: -webkit-flex;
-                height: 10rem;;
-                padding: 10px 0px;
-                border: 1px solid rgba(0,0,0,0.1);
-                .item-left{
-                    width: 65%;
-                    .subject{
-                        height: 5rem;
-                        line-height: 5rem;
-                        text-align: center;
-                    }
-                    .info{
-                        height: 5rem;
-                        display: flex;
-                        display: -webkit-flex;
-                        justify-content: space-around;   
-                        color: rgba(0,0,0,0.5);    
-                        font-size: 2rem;
-                    }
-                    
-                }
-                .item-right{
-                    width: 35%;
-                    img{
-                        max-width: 75%;
-                        max-height: 90%;
-                    }
-                }
+      });
+    },
+    showMore() {
+      this.isshowmore = !this.isshowmore;
+    },
+    goDetail(item){
+        this.$router.push({
+            path:'/detailinter',
+            query:{
+                item:item
             }
-            
-        }
+        })
     }
+  }
+};
+</script>
+
+<style lang="less">
+.internat {
+  .title {
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(79, 93, 110);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    .titlename {
+      float: left;
+      margin-left: 25px;
+      h1 {
+        color: red;
+      }
+    }
+
+    .morebtn {
+      float: right;
+      margin-right: 15px;
+    }
+  }
+  .maininfo {
+    .item {
+      display: flex;
+      display: -webkit-flex;
+      height: 10rem;
+      padding: 10px 0px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      .item-left {
+        width: 65%;
+        .subject {
+          height: 5rem;
+          line-height: 5rem;
+          text-align: center;
+        }
+        .info {
+          height: 5rem;
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-around;
+          color: rgba(0, 0, 0, 0.5);
+          font-size: 2rem;
+        }
+      }
+      .item-right {
+        width: 35%;
+        img {
+          max-width: 75%;
+          max-height: 90%;
+        }
+      }
+    }
+  }
+}
 </style>
 

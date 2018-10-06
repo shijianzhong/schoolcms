@@ -19,12 +19,13 @@
                     所在地区
                 </div>
                 <div class="iteminput">
-                    <select>
+                    <input type="text" v-model="address">
+                    <!-- <select>
                         <option value="volvo">Volvo</option>
                         <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
-                    </select>
+                    </select> -->
                 </div>
             </div>
             <div class="item">
@@ -32,12 +33,7 @@
                     所在年级
                 </div>
                 <div class="iteminput">
-                    <select>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
-                    </select>
+                    <input type="text" v-model="age">
                 </div>
             </div>
             <div class="item">
@@ -45,7 +41,7 @@
                     家长姓名
                 </div>
                 <div class="iteminput">
-                    <input type="text">
+                    <input type="text" v-model="name">
                 </div>
             </div>
             <div class="item">
@@ -53,24 +49,45 @@
                     联系电话
                 </div>
                 <div class="iteminput">
-                    <input type="text">
+                    <input type="text" v-model="tel">
                 </div>
             </div>
-            <x-button class="xbtn" type="primary">提交</x-button>
+            <x-button class="xbtn" type="primary" @click.native="submitInfo">提交</x-button>
+            <alert v-model="show" title="提示">提交成功</alert>
         </div>
     </div>
 </template>
 <script>
-import { Selector , XButton} from "vux";
+import { Selector ,Alert, XButton} from "vux";
+import { InsertSignUpInfo } from "../api";
 export default {
   props: ["title"],
   data() {
     return {
-      list: [{ key: "gd", value: "广东" }, { key: "gx", value: "广西" }]
+      list: [{ key: "gd", value: "广东" }, { key: "gx", value: "广西" }],
+      address:'',
+      tel:'',
+      age:'',
+      name:'',
+      show:false,
     };
   },
-  components: { Selector,XButton },
-  methods: {}
+  components: { Selector,XButton,Alert },
+  methods: {
+      submitInfo(){
+          InsertSignUpInfo({
+              title:this.title,
+              address:this.address,
+              age:this.age,
+              name:this.name,
+              tel:this.tel
+          }).then(data=>{
+              if(data.success){
+                  this.show=true;
+              }
+          })
+      }
+  }
 };
 </script>
 
