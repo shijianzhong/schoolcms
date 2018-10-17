@@ -19,3 +19,5 @@ export const SelectInterDynamics = () => http.post('api/SelectInterDynamics')
 export const UpdateInterDynamicsReadtimes = (data) => http.post('api/UpdateInterDynamicsReadtimes', data)
 
 export const InsertSignUpInfo = (data) => http.post('api/InsertSignUpInfo', data)
+
+export const getActiveSpecialList = (data) => http.post('api/getActiveSpecialList', data)

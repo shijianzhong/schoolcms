@@ -25,10 +25,8 @@ export default {
     },
     props:['item'],
     mounted(){
-        debugger;
         this.item= this.$route.query.item;
         UpdateInterDynamicsReadtimes({id:this.item.id}).then(data=>{
-            debugger
         })
     }
 }

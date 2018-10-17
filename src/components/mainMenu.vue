@@ -1,6 +1,6 @@
 <template>
   <div class="mainmenu">
-    <grid :cols="4" :show-lr-borders="false">
+    <grid :cols="3" :show-lr-borders="false">
       <grid-item v-for="(item,index) in menus" :key="index">
         <img slot="icon" :src="item.url" @click="mainMenuClick(item,index)">
         <span class="spanlabel" slot="label">{{item.label}}</span>
@@ -39,18 +39,18 @@ export default {
           url: "../../static/5.png",
           label: "澳洲项目"
         },
-        {
-          url: "../../static/3.png",
-          label: "精品研学"
-        },
+        // {
+        //   url: "../../static/3.png",
+        //   label: "精品研学"
+        // },
         {
           url: "../../static/7.png",
           label: "专场活动"
         },
-        {
-          url: "../../static/8.png",
-          label: "资料下载"
-        }
+        // {
+        //   url: "../../static/8.png",
+        //   label: "资料下载"
+        // }
 
       ]
     };
@@ -73,6 +73,8 @@ export default {
         case 4:
         this.$router.push({path:'/publicProject'})
         break;
+        case 5:
+        this.$router.push({path:'/activespecial'})
       }
       
     }

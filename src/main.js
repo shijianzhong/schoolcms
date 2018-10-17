@@ -15,6 +15,9 @@ import berkeleyPre from './pages/berkeleyPre'
 import cooperateHigh from './pages/cooperateHigh'
 import publicProject from './pages/publicpageForProject'
 import detailinter from './components/detailInterinfo.vue'
+import activespecial from './pages/activespecial.vue'
+import activespecialdetail from './pages/activespecialdetail.vue'
+import michiganLearningcenter from './pages/michiganLearningcenter.vue'
 // Vue.use(Mint);
 
 
@@ -59,6 +62,18 @@ const routes = [{
     {
         path: '/detailinter',
         component: detailinter
+    },
+    {
+        path: '/activespecial',
+        component: activespecial
+    },
+    {
+        path: '/activespecialdetail',
+        component: activespecialdetail
+    },
+    {
+        path: '/michiganlearncenter',
+        component: michiganLearningcenter
     }
 
 ]

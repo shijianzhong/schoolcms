@@ -1,7 +1,7 @@
 <template>
   <div class="firstPage">
     <header-search title="为明国际教育" class="headersearch"></header-search>
-    <swiper loop auto :list="carouselList" :index="carouselIndex" @on-index-change="carouselIndexChange"></swiper>
+    <swiper  loop auto :list="carouselList" :index="carouselIndex" @on-index-change="carouselIndexChange"></swiper>
     <main-menu v-model="mainMenuIndex"></main-menu>
     <div class="signup">
       <img src="../assets/signba.png">
@@ -67,7 +67,6 @@ export default {
   },
   watch: {
     mainMenuIndex(val) {
-      debugger;
     }
   },
   created() {
@@ -76,6 +75,7 @@ export default {
       if (res.success) {
         this.carouselList=res.data.map((item, index) => ({
           img: item.imgsrc,
+          url:'/michiganlearncenter'
           // fallbackImg: item.fallbackImg
         }));
         console.log(this.carouselList.length);
@@ -85,6 +85,7 @@ export default {
   methods: {
     carouselIndexChange(index) {
       this.carouselIndex = index;
+    
     }
   }
 };
