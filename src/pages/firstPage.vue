@@ -3,8 +3,8 @@
     <header-search title="为明国际教育" class="headersearch"></header-search>
     <swiper  loop auto :list="carouselList" :index="carouselIndex" @on-index-change="carouselIndexChange"></swiper>
     <main-menu v-model="mainMenuIndex"></main-menu>
-    <div class="signup">
-      <img src="../assets/signba.png">
+    <div class="signup" @click="signclick">
+      <img :src="banImg.imgsrc">
       <x-button class="signupbtn" mini>UCB预科报名</x-button>
     </div>
     <admit-ino></admit-ino>
@@ -62,7 +62,8 @@ export default {
     return {
       carouselList: [],
       carouselIndex: 0,
-      mainMenuIndex: -1
+      mainMenuIndex: -1,
+      banImg:{},
     };
   },
   watch: {
@@ -73,9 +74,15 @@ export default {
     getCarouselList().then(res => {
       console.log(res);
       if (res.success) {
+        debugger
+        var indx = res.data.findIndex(x=>x.type=="1");
+        if(indx>-1){
+        this.banImg = res.data.splice(indx)[0];}
+
         this.carouselList=res.data.map((item, index) => ({
           img: item.imgsrc,
-          url:'/michiganlearncenter'
+          // url:'/michiganlearncenter'
+          url:item.url
           // fallbackImg: item.fallbackImg
         }));
         console.log(this.carouselList.length);
@@ -86,6 +93,9 @@ export default {
     carouselIndexChange(index) {
       this.carouselIndex = index;
     
+    },
+    signclick(){
+      this.$router.push({path:'/berkeleypre'});
     }
   }
 };

@@ -143,7 +143,7 @@ export default {
 .dialogCon {
   padding: 20px 20px 20px 25px;
   .dialogCon_top {
-    font-size: 16px;
+    font-size: 17px;
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-bottom: 15px;
@@ -159,7 +159,9 @@ export default {
       display: -webkit-flex;
       justify-content: center;
       margin-top: 20px;
+      font-size: 13px;
       .telItem-title {
+        
       }
       .telItem-tel {
         color: rgb(117, 86, 12);
