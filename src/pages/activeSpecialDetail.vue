@@ -1,10 +1,9 @@
 <template>
     <div class="active-special-detail">
-        <header-search :title="titles[index-1]" class="headersearch"></header-search>
+        <header-search :title="item.title" class="headersearch"></header-search>
         <div class="mainimg">
-            <img v-if="index==1" src="../assets/specialactive/4.png">
-            <img v-else-if="index==2" src="../assets/specialactive/5.png" alt="">
-            <img v-else-if="index==3" src="../assets/specialactive/6.png" alt="">
+            <img  :src="item.image">
+        
             <div class="signbtn" v-if="!singup" @click="linkSignPage">报名</div>
         </div>
         <div v-if="!singup">
@@ -13,10 +12,10 @@
                     <span style="border-left:5px solid red;margin-right:5px"></span>介绍</div>
             </div>
             <div class="content">
-                {{contents}}
+                {{item.content}}
             </div>
         </div>
-        <sign-upinfo v-else :title="titles[index-1]+'报名方式'"></sign-upinfo>
+        <sign-upinfo v-else :title="`${item.title}报名方式`"></sign-upinfo>
     </div>
 </template>
 <script>
@@ -35,13 +34,7 @@ export default {
     return {
       singup: false,
       index: 0,
-      imgs: [
-        "../assets/specialactive/1.png",
-        "../assets/specialactive/2.png",
-        "../assets/specialactive/3.png"
-      ],
-      titles: ["蓝思亲子阅读沙龙", "中澳项目开放日", "伯克利学长来了"],
-      contents:""
+      item:null,
     };
   },
   created() {
@@ -54,12 +47,7 @@ export default {
     },
     getActiveSpecialList(){
         getActiveSpecialList().then(data=>{
-            
-            let oo = data.data.findIndex(x=>x.title==this.titles[this.index-1]);
-
-            if(oo>-1){
-                this.contents=data.data[oo].content;
-            }
+            this.item = data.data[this.index];
         })
     }
   }

@@ -1,28 +1,23 @@
 <template>
-    <div class="active-special-main">
-        <div class="active-special-title">
-            活动专场
-        </div>
-        <div class="active-special-item" @click="gotoDetaile(1)">
-            <img src="../assets/specialactive/1.png">
-            <div>蓝思亲子阅读沙龙</div>
-        </div>
-        <div class="active-special-item" @click="gotoDetaile(2)">
-            <img src="../assets/specialactive/2.png">
-            <div>中澳项目开放日</div>
-        </div>
-        <div class="active-special-item" @click="gotoDetaile(3)">
-            <img src="../assets/specialactive/3.png">
-            <div>伯克利学长来了</div>
-        </div>
+  <div class="active-special-main">
+    <div class="active-special-title">
+      活动专场
     </div>
+    <div v-for="(item,index) in resources" :key="index"
+      class="active-special-item" 
+      @click="gotoDetaile(index)"
+    >
+      <img :src="item.image">
+      <div>{{item.title}}</div>
+    </div>
+  </div>
 </template>
 <script>
 import headerSearch from "@/components/headerSearch";
 import signUpinfo from "@/components/signUpinfo";
 import berkeleyHighinfo from "@/components/berkeleyHighinfo";
 
-import { getlistSort } from "../api";
+import { getlistSort,getActiveSpecialList } from "../api";
 export default {
   components: {
     headerSearch,
@@ -31,10 +26,13 @@ export default {
   },
   data() {
     return {
-      singup: false
+      singup: false,
+      resources:[],
     };
   },
-  created() {},
+  created() {
+    this.getActiveSpecialList();
+  },
   methods: {
     linkSignPage() {
       this.singup = !this.singup;
@@ -45,6 +43,11 @@ export default {
         query: {
           index: index
         }
+      });
+    },
+    getActiveSpecialList() {
+      getActiveSpecialList().then(data => {
+        this.resources = data.data;
       });
     }
   }

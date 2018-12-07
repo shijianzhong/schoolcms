@@ -10,7 +10,7 @@
                 <div class="item-left">
                     <h5 @click="goDetail(item)" class="subject">{{item.title}}</h5>
                     <div class="info">
-                        <span>{{item.pbtime}}</span>
+                        <span>{{new Date(item.pbtime).toLocaleString()}}</span>
                         <span>阅读{{item.readnums}}人</span>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <div class="item-left">
                         <h5 @click="goDetail(item)" class="subject">{{item.title}}</h5>
                         <div class="info">
-                            <span>{{item.pbtime}}</span>
+                            <span>{{new Date(item.pbtime).toLocaleString()}}</span>
                             <span>阅读{{item.readnums}}人</span>
                         </div>
                     </div>
@@ -51,6 +51,7 @@ export default {
     getInfo() {
       SelectInterDynamics().then(res => {
         if (res.success) {
+          debugger
           this.items = res.data;
         }
       });

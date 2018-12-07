@@ -27,7 +27,8 @@
         <span slot="label">我的</span>
       </tabbar-item> -->
     </tabbar>
-    <div v-transfer-dom>
+    <!-- v-transfer-dom -->
+    <div>
       <x-dialog :dialog-style="{'max-width': '90%', width: '100%', height: '50%', 'background-color': 'rgba(255,255,255,0.8)'}" v-model="showDialogStyle" hide-on-blur>
         <div class="dialogCon">
           <div class="dialogCon_top">

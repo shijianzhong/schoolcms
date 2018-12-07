@@ -5,8 +5,8 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 
 // const host = conf.publicPath;
-// const host = 'http://localhost:3001/'
-const host = 'http://imeasy.cn/'
+const host = 'http://localhost:3001/'
+// const host = 'http://imeasy.cn/'
 
 export default {
     post: (url, data, error, option) =>
