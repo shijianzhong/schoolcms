@@ -18,8 +18,7 @@
                 </div>
                 <div class="item-right">
                     <h5>{{item.title}}</h5>
-                    <p>
-                        {{item.content}}
+                    <p v-html="item.content">
                     </p>
 
                 </div>
@@ -37,8 +36,8 @@
                 </div>
                 <div class="item-right">
                     <h5>{{item.title}}</h5>
-                    <p>
-                        {{item.content}}
+                    <p v-html="item.content">
+                       
                     </p>
 
                 </div>

@@ -11,8 +11,7 @@
                 <div class="titlename">
                     <span style="border-left:5px solid red;margin-right:5px"></span>介绍</div>
             </div>
-            <div class="content">
-                {{item.content}}
+            <div class="content" v-html="item.content">
             </div>
         </div>
         <sign-upinfo v-else :title="`${item.title}报名方式`"></sign-upinfo>
